@@ -1,0 +1,40 @@
+.maincard {
+	margin-top: 10%;
+}
+
+.weatherdash {
+	color: white;
+	background-color: #393a3b;
+	/* border-radius: 10px; */
+}
+.searchcity {
+	margin-left: 10%;
+}
+.listcard {
+	margin-left: 5%;
+}
+.currentlocation {
+	margin-left: 10px;
+}
+
+.day {
+	margin-left: 2%;
+	color: #ebebeb;
+	background-color: #007bff;
+}
+.card-text {
+	text-align: left;
+}
+
+.srchbtn {
+	margin-left: 5%;
+}
+.tempcold {
+	color: #007bff;
+}
+.tempmid {
+	color: #4ccc7d;
+}
+.temphot {
+	color: tomato;
+}
