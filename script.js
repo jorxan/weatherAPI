@@ -5,7 +5,7 @@ function citysearch(data) {
 		$.ajax({
 			type     : 'GET',
 			url      :
-				'http://api.openweathermap.org/data/2.5/uvi/forecast?appid=' + APIKey + '&lat=' + lat + '&lon=' + lon,
+				'https://api.openweathermap.org/data/2.5/uvi/forecast?appid=' + APIKey + '&lat=' + lat + '&lon=' + lon,
 			dataType : 'json',
 			success  : function(data) {
 				const uv = $('<p>').text('UV Index: ');
@@ -41,7 +41,7 @@ function citysearch(data) {
 			const icon = response.weather[0].icon;
 			const weathericon = $('<img>');
 			$('#location').text(location);
-			$(weathericon).attr('src', 'http://openweathermap.org/img/wn/' + icon + '@2x.png');
+			$(weathericon).attr('src', 'https://openweathermap.org/img/wn/' + icon + '@2x.png');
 			$('#temperature').text('Temperature: ' + Math.floor(tempF) + '°F');
 			$('#location').append(weathericon);
 			if (tempF < 50) {
@@ -64,7 +64,7 @@ function citysearch(data) {
 function getForecast(searchValue) {
 	$.ajax({
 		type     : 'GET',
-		url      : 'http://api.openweathermap.org/data/2.5/forecast?q=' + searchValue + '&appid=' + APIKey,
+		url      : 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchValue + '&appid=' + APIKey,
 		dataType : 'json',
 		success  : function(data) {
 			// overwrite any existing content with title and empty row
