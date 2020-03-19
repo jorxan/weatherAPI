@@ -139,6 +139,8 @@ $(document).ready(function() {
 	}
 	$('#search').on('click', function(event) {
 		event.preventDefault();
+		$('#uv').empty();
+
 		$('.main').show();
 		let city = $('#searched').val();
 		localStorage.setItem(city, city);
@@ -148,8 +150,10 @@ $(document).ready(function() {
 		$('.five').empty();
 	});
 	$('.history').on('click', function(event) {
-		$('.main').show();
 		event.preventDefault();
+		$('.main').show();
+
+		$('#uv').empty();
 		citysearch($(this).text());
 		getForecast($(this).text());
 		$('.five').empty();
